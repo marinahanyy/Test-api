@@ -14,8 +14,14 @@ jobs:
 
       - name: Run tasks in parallel
         run: |
-          npm run dev 8080 &   # Run task 1 in the background
+          npm run dev 8080 &
+          npm test
+          wait
 
-      - run:
-          name: Run Tests
-          command: npm test
+      # - run:
+      #     name: run port 8080
+      #     command: npm run dev 8080
+
+      # - run:
+      #     name: Run Tests
+      #     command: npm test
