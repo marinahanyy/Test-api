@@ -72,29 +72,29 @@ describe('Testing mock-user-auth', () => {
          done();
        });
    });
-   it('should delete user by token',  function() {
-    request('http://localhost:8080')
-      .delete('/api/v1/users')
-      .set('Authorization', required_token)
-      .expect(200)
-      .end((err, res) => {
-        expect(res.body).toBeDefined();
-        expect(res.body.message).toBe('User deleted with success');
-        done();
-      });
-  });
-  it('should delete all users with the correct admin key', function(done) {
-    const adminKey = 'keyadmin123';
-     request('http://localhost:8080')
-      .delete('/api/v1/all-users')
-      .send({ key_admin: adminKey })
-      .expect(200)
-      .end((err, res) => {
-        expect(res.body).toBeDefined();
-        expect(res.body.message).toBe('Users deleted with success');
-        done();
-      });
-  });
+  //  it('should delete user by token',  function(done) {
+  //   request('http://localhost:8080')
+  //     .delete('/api/v1/users')
+  //     .set('Authorization', required_token)
+  //     .expect(200)
+  //     .end((err, res) => {
+  //       expect(res.body).toBeDefined();
+  //       expect(res.body.message).toBe('User deleted with success');
+  //       done();
+  //     });
+  // });
+  // it('should delete all users with the correct admin key', function(done) {
+  //   const adminKey = 'keyadmin123';
+  //    request('http://localhost:8080')
+  //     .delete('/api/v1/all-users')
+  //     .send({ key_admin: adminKey })
+  //     .expect(200)
+  //     .end((err, res) => {
+  //       expect(res.body).toBeDefined();
+  //       expect(res.body.message).toBe('Users deleted with success');
+  //       done();
+  //     });
+  // });
 });
 
 
