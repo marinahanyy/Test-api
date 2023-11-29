@@ -1,8 +1,7 @@
 version: 2.1
-
 jobs:
   build:
-    docker:
+    docker: 
       - image: node:20.10
 
     steps:
@@ -12,9 +11,9 @@ jobs:
           name: Install Dependencies
           command: npm install
 
-     - name: Run tasks in parallel
+      - name: Run tasks in parallel
         run: npm run dev 8080 && npm test
-          
+ 
 
       # - run:
       #     name: run port 8080
