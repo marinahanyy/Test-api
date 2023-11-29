@@ -14,5 +14,6 @@ Documentation There is a folder in each part of the project that contains docume
 HTML report
 Bug report
 Test cases report
+I want to add something here that if we commented the delete api for user and users the ci/cd will pass as if we put them all together they are delelting and creating user at the same time so if fails. I test each one individually and the test pass also i tested them on postman.
 CircleCI badge
 [![CircleCI](https://circleci.com/gh/marinahanyy/Test-api.svg?style=svg)](https://circleci.com/gh/marinahanyy/Test-api)
