@@ -12,10 +12,8 @@ jobs:
           name: Install Dependencies
           command: npm install
 
-      - name: Run tasks in parallel
-        run: |
-          npm run dev 8080 &
-          npm test
+     - name: Run tasks in parallel
+        run: npm run dev 8080 && npm test
           
 
       # - run:
