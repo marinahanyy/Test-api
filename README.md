@@ -14,3 +14,5 @@ Documentation There is a folder in each part of the project that contains docume
 HTML report
 Bug report
 Test cases report
+CircleCI badge
+[![CircleCI](https://circleci.com/gh/marinahanyy/Test-api.svg?style=svg)](https://circleci.com/gh/marinahanyy/Test-api)
