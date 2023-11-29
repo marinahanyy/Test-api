@@ -16,7 +16,7 @@ jobs:
         run: |
           npm run dev 8080 &
           npm test
-          wait
+          
 
       # - run:
       #     name: run port 8080
