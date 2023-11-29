@@ -1,0 +1,27 @@
+{
+  "spec_dir": "spec",
+  "spec_files": [
+    "**/*.spec.js"
+  ],
+  "helpers": [
+    "helpers/**/*.js"
+  ],
+  "stopSpecOnExpectationFailure": false,
+  "random": false,
+  "reporters": [
+    {
+      "name": "jasmine-spec-reporter",
+      "options": {
+        "suite": {
+          "displayNumber": true
+        },
+        "spec": {
+          "displayPending": true
+        },
+        "summary": {
+          "displayStacktrace": true
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "name": "api-testing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jasmine",
+    "start": "node index.js",
+    "dev": "nodemon ./node_modules/mock-user-auth/bin/www.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/runtime": "^7.23.4",
+    "axios": "^1.6.2",
+    "express": "^4.18.2",
+    "jasmine-promises": "^0.4.1",
+    "mock-user-auth": "^1.0.15",
+    "nodemon": "^3.0.1",
+    "regenerator-runtime": "^0.14.0",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "7.4.4",
+    "@babel/core": "7.4.5",
+    "@babel/node": "7.4.5",
+    "@babel/plugin-transform-runtime": "^7.23.4",
+    "@babel/preset-env": "7.4.5",
+    "@types/uuid": "^9.0.7",
+    "babel-core": "^6.26.3",
+    "babel-plugin-istanbul": "5.1.4",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "chai": "^4.3.10",
+    "chai-http": "^4.4.0",
+    "jasmine": "^5.1.0",
+    "jasmine-reporters": "^2.5.2",
+    "jasmine-spec-reporter": "^7.0.0",
+    "jasmine2-reporter": "^1.0.1",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.3.0",
+    "mochawesome-report-generator": "^6.2.0",
+    "supertest": "^6.3.3"
+  }
+}

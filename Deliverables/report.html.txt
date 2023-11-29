@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mock User Auth API Test Report</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .test-case {
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+            padding: 10px;
+        }
+        .status-passed {
+            color: green;
+        }
+        .status-failed {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+<div class="test-case">
+    <h3>Test Case 1: Authenticate User Successfully</h3>
+    <p>Status: <span class="status-passed">Passed</span></p>
+    <p>Endpoint: POST /api/v1/auth</p>
+    <p>Request Payload:
+        <pre>
+            {
+              "email": "user@gmail.com",
+              "password": "user123"
+            }
+        </pre>
+    </p>
+    <p>Expected Response:
+        <pre>
+            {
+              "token": "eyJhbGciOiJI..."
+            }
+        </pre>
+    </p>
+    <p>Actual Response:
+        <pre>
+            {
+              "token": "eyJhbGciOiJI..."
+            }
+        </pre>
+    </p>
+</div>
+
+<div class="test-case">
+    <h3>Test Case 2: Create User Successfully</h3>
+    <p>Status: <span class="status-passed">Passed</span></p>
+    <p>Endpoint: POST /api/v1/users</p>
+    <p>Request Payload:
+        <pre>
+            {
+              "name": "New User",
+              "email": "newuser@gmail.com",
+              "password": "newuser123"
+            }
+        </pre>
+    </p>
+    <p>Expected Response:
+        <pre>
+            {
+              "message": "User registered with success",
+              "token": "eyJhbGciOiJI..."
+            }
+        </pre>
+    </p>
+    <p>Actual Response:
+        <pre>
+            {
+              "message": "User registered with success",
+              "token": "eyJhbGciOiJI..."
+            }
+        </pre>
+    </p>
+</div>
+
+<div class="test-case">
+    <h3>Test Case 3: Get User Profile with Valid Token</h3>
+    <p>Status: <span class="status-passed">Passed</span></p>
+    <p>Endpoint: GET /api/v1/users</p>
+    <p>Request Header:
+        <pre>
+            {
+              "Authorization": "Bearer eyJhbGciOiJI..."
+            }
+        </pre>
+    </p>
+    <p>Expected Response:
+        <pre>
+            {
+              "id": 123,
+              "name": "New User",
+              "email": "newuser@gmail.com",
+              "imageUrl": "https://example.com/avatar.jpg"
+            }
+        </pre>
+    </p>
+    <p>Actual Response:
+        <pre>
+            {
+              "id": 123,
+              "name": "New User",
+              "email": "newuser@gmail.com",
+              "imageUrl": "https://example.com/avatar.jpg"
+            }
+        </pre>
+    </p>
+</div>
+
+<div class="test-case">
+    <h3>Test Case 4: Update User Profile with Valid Token</h3>
+    <p>Status: <span class="status-passed">Passed</span></p>
+    <p>Endpoint: PATCH /api/v1/users</p>
+    <p>Request Header:
+        <pre>
+            {
+              "Authorization": "Bearer eyJhbGciOiJI..."
+            }
+        </pre>
+    </p>
+    <p>Request Payload:
+        <pre>
+            {
+              "name": "Updated User",
+              "email": "updateduser@gmail.com"
+            }
+        </pre>
+    </p>
+    <p>Expected Response:
+        <pre>
+            {
+              "message": "User updated with success"
+            }
+        </pre>
+    </p>
+    <p>Actual Response:
+        <pre>
+            {
+              "message": "User updated with success"
+            }
+        </pre>
+    </p>
+</div>
+
+<div class="test-case">
+    <h3>Test Case 5: Delete User Profile with Valid Token</h3>
+    <p>Status: <span class="status-passed">Passed</span></p>
+    <p>Endpoint: DELETE /api/v1/users</p>
+    <p>Request Header:
+        <pre>
+            {
+              "Authorization": "Bearer eyJhbGciOiJI..."
+            }
+        </pre>
+    </p>
+    <p
+</div>
+
+<div class="test-case">
+    <h3>Test Case 7: Delete All Users with Admin Key</h3>
+    <p>Status: <span class="status-passed">Passed</span></p>
+    <p>Endpoint: DELETE /api/v1/all-users</p>
+    <p>Request Payload:
+        <pre>
+            {
+              "key_admin": "admin123"
+            }
+        </pre>
+    </p>
+    <p>Expected Response:
+        <pre>
+            {
+              "message": "Users deleted with success"
+            }
+        </pre>
+    </p>
+    <p>Actual Response:
+        <pre>
+            {
+              "message": "Users deleted with success"
+            }
+        </pre>
+    </p>
+</div>
+</body>
+</html>
